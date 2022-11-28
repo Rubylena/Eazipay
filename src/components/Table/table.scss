@@ -1,0 +1,27 @@
+table {
+  border: 1px solid black;
+
+  th:nth-child(1){
+    background: #E0E0E0;
+  }
+  th,
+  td {
+    padding: 0.3rem 1.7rem;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+
+  }
+  tbody tr:nth-child(5){
+    background: #DFE5FF;
+  }
+
+  td:nth-child(2), td:nth-child(3){
+    background: #FFF0EC;
+  }
+
+}
+@media all and (max-width: 400px) {
+  table{
+    font-size: 10px !important;
+  }
+}

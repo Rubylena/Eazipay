@@ -1,0 +1,62 @@
+.box {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 1px solid black;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .box:hover input ~ .check {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .box input:checked ~ .check {
+    border: 1px solid green;
+  }
+  
+  /* Create the check/indicator (hidden when not checked) */
+  .check:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the check when checked */
+  .box input:checked ~ .check:after {
+    display: block;
+  }
+  
+  /* Style the check/indicator */
+  .box .check:after {
+    left: 4px;
+    top: 0;
+    width: 5px;
+    height: 10px;
+    border: solid #19A301;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
